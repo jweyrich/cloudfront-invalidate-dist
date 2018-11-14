@@ -1,0 +1,21 @@
+service: cloudfront-invalidate-dist
+
+provider:
+  name: aws
+  runtime: ${opt:runtime, 'nodejs8.10'}
+  memorySize: 128
+  timeout: 30
+  stage: ${opt:stage, 'dev'}
+  region: ${opt:region, 'us-east-1'}
+
+  iamRoleStatements:
+    - Effect: "Allow"
+      Action:
+        - "codepipeline:PutJobFailureResult"
+        - "codepipeline:PutJobSuccessResult"
+        - "cloudfront:CreateInvalidation"
+      Resource: "*"
+
+functions:
+  invalidate:
+    handler: handler.handler
