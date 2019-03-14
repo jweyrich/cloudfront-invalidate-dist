@@ -28,7 +28,7 @@ Install the [Serverless Framework](https://serverless.com/) if you don't have it
 7. Save the action
 8. Test
 
-### Examples of UserParamaters
+### Examples of User Parameters
 
     { "distributionId": "FP7AWS1WBJLKSX", "objectPaths": [ "/*" ] }
     { "distributionId": "FP7AWS1WBJLKSX", "objectPaths": [ "/foo", "/bar/baz.jpg", "/bar/baz/*" ] }
