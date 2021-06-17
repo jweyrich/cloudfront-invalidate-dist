@@ -2,7 +2,7 @@ service: cloudfront-invalidate-dist
 
 provider:
   name: aws
-  runtime: ${opt:runtime, 'nodejs10.x'}
+  runtime: ${opt:runtime, 'nodejs12.x'}
   memorySize: 128
   timeout: 30
   stage: ${opt:stage, 'dev'}
