@@ -26,9 +26,6 @@
     "url": "https://github.com/jweyrich/cloudfront-invalidate-dist/issues"
   },
   "homepage": "https://github.com/jweyrich/cloudfront-invalidate-dist#readme",
-  "dependencies": {
-    "serverless-python-requirements": "^4.2.5"
-  },
   "devDependencies": {
     "aws-sdk": "^2.1159.0"
   }
