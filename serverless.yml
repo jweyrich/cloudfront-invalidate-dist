@@ -16,6 +16,11 @@ provider:
         - "cloudfront:CreateInvalidation"
       Resource: "*"
 
+package:
+  patterns:
+    - '!**/*'
+    - handler.js
+
 functions:
   invalidate:
     handler: handler.handler
