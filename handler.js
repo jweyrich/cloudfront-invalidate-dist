@@ -4,9 +4,7 @@
 // REFERENCE: https://docs.aws.amazon.com/codepipeline/latest/userguide/actions-invoke-lambda-function.html#actions-invoke-lambda-function-add-action
 //
 
-const assert = require('assert');
 const AWS = require('aws-sdk');
-const http = require('http');
 
 async function put_job_success(job_id, message) {
   //
@@ -31,7 +29,7 @@ async function put_job_success(job_id, message) {
 async function put_job_failure(job_id, invoke_id, message) {
   //
   // Notify CodePipeline of a failed job
-  // 
+  //
   // Args:
   //     job: The CodePipeline job ID
   //     invoke_id: The current Lambda execution Invoke ID
@@ -159,7 +157,7 @@ async function lambda_handler(event, context) {
     console.error(ex);
 
     await put_job_failure(job_id, context.invokeid, 'Function exception: ' + JSON.stringify(ex));
-    
+
     const body = {
       "message": JSON.stringify(ex),
       "input": event
