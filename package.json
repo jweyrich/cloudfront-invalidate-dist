@@ -1,6 +1,6 @@
 {
   "name": "cloudfront-invalidate-dist",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Lambda function to be invoked by AWS CodePipeline to invalidate specified paths from a CloudFront distribution.",
   "main": "index.js",
   "directories": {
